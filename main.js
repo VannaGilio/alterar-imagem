@@ -1,11 +1,18 @@
-"use strict"
+'use strict'
 
-const botaoTrocarImagem = document.getElementById('trocar-imagem')
+const imagens = [
+    './img/hokages.webp',
+    './img/valefim.jpg'
+]
 
-function trocarImagem (){
+const botaoTrocarImagem = document.querySelector('#trocar-imagem button')
+let indiceImagem = 0
 
-    const imagem = document.getElementById('imagem').value
-    document.documentElement.style.setProperty('--imagem-fundo', imagem)
+function trocarImagem() {
+    indiceImagem = (indiceImagem + 1) % imagens.length
+    const imagem = imagens[indiceImagem]
+    
+    document.documentElement.style.setProperty('--imagem-fundo', `url(${imagem})`)
 }
 
 botaoTrocarImagem.addEventListener('click', trocarImagem)

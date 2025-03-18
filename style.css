@@ -1,20 +1,19 @@
-:root{
-    --img-fundo:
+body {
+    background-image: var(--imagem-fundo);
+    background-size: cover;
+    transition: background-image 0.3s;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.container {
+    text-align: center;
+    padding: 20px;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#trocar-imagem {
+    margin-bottom: 20px;
 }
 
-.imagem{
-    height: 50%;
+button {
+    padding: 10px;
+    cursor: pointer;
 }
